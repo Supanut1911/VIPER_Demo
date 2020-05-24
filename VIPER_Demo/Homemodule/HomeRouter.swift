@@ -7,15 +7,31 @@
 //
 
 import Foundation
+import UIKit
 
-protocol HomeRouting {
+class HomeRouter: PresenterToRouterProtocol {
+    static var mainstoryboard: UIStoryboard {
+        return UIStoryboard(name:"Main",bundle: Bundle.main)
+    }
+    
+    static func createModule() -> UIViewController {
+        let view = mainstoryboard.instantiateViewController(withIdentifier: "HomeViewController") as? HomeViewController
+        let presenter: ViewToPresenterProtocol & InteractorToPresenterProtocol = HomePresenter()
+        let interactor: PresentorToInteractorProtocol = HomeInteractor()
+        let router: PresenterToRouterProtocol = HomeRouter()
+        
+        view?.presenter = presenter
+        presenter.view = view
+        presenter.router = router
+        presenter.interactor = interactor
+        interactor.presenter = presenter
+        
+        return view!;
+        
+        return view!
+    }
+    
     
 }
 
-class HomeRouter {
-    
-}
 
-extension HomeRouter: HomeRouting {
-    
-}

@@ -8,32 +8,25 @@
 
 import UIKit
 
-protocol HomeView: class{
-    func getTitle(information: HomeModel)
-}
 
 class HomeViewController: UIViewController {
-
-    var presenter: HomePresentation?
+    var presenter: ViewToPresenterProtocol?
     
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var detailLabel: UILabel!
     
-    
     override func viewDidLoad() {
-        super.viewDidLoad()
-        
-        presenter?.viewDidLoad()
+        self.presenter?.viewDidLoad()
     }
-
-
+    
 }
 
-extension HomeViewController: HomeView {
-    func getTitle(information: HomeModel) {
-        self.titleLabel.text = information.title
-        self.detailLabel.text = information.detail
-        
+extension HomeViewController: PresenterToViewProtocol{
+
+    
+    func updateView(model: HomeModel){
+        self.titleLabel.text = model.title
+        self.detailLabel.text = model.detail
     }
     
     

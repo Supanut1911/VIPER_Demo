@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		17292E1B247A65A600AF4B51 /* Protocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17292E1A247A65A600AF4B51 /* Protocol.swift */; };
 		172AB23E2476B925003DCC1F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 172AB23D2476B925003DCC1F /* AppDelegate.swift */; };
 		172AB2402476B925003DCC1F /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 172AB23F2476B925003DCC1F /* SceneDelegate.swift */; };
 		172AB2422476B925003DCC1F /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 172AB2412476B925003DCC1F /* HomeViewController.swift */; };
@@ -21,6 +22,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		17292E1A247A65A600AF4B51 /* Protocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Protocol.swift; sourceTree = "<group>"; };
 		172AB23A2476B925003DCC1F /* VIPER_Demo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = VIPER_Demo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		172AB23D2476B925003DCC1F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		172AB23F2476B925003DCC1F /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -81,6 +83,7 @@
 		172AB2512476B934003DCC1F /* Homemodule */ = {
 			isa = PBXGroup;
 			children = (
+				17292E1A247A65A600AF4B51 /* Protocol.swift */,
 				172AB2412476B925003DCC1F /* HomeViewController.swift */,
 				172AB2522476B9A3003DCC1F /* HomePresenter.swift */,
 				172AB2542476B9AE003DCC1F /* HomeInteractor.swift */,
@@ -174,6 +177,7 @@
 				172AB2572476B9BA003DCC1F /* HomeRouter.swift in Sources */,
 				172AB23E2476B925003DCC1F /* AppDelegate.swift in Sources */,
 				172AB25C2476BD4D003DCC1F /* HomeBuilder.swift in Sources */,
+				17292E1B247A65A600AF4B51 /* Protocol.swift in Sources */,
 				172AB2402476B925003DCC1F /* SceneDelegate.swift in Sources */,
 				172AB2552476B9AE003DCC1F /* HomeInteractor.swift in Sources */,
 				172AB2532476B9A3003DCC1F /* HomePresenter.swift in Sources */,
